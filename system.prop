@@ -102,3 +102,5 @@ ro.surface_flinger.supports_background_blur=1
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
 
+#AvoidGfxAccel 
+ro.config.avoid_gfx_accel=true
