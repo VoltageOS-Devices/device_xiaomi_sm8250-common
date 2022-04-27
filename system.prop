@@ -91,3 +91,5 @@ ro.surface_flinger.supports_background_blur=1
 # Disable Skia tracing by default
 debug.hwui.skia_atrace_enabled=false
 
+# Disable Remote Keygaurd animation
+persist.wm.enable_remote_keyguard_animation=0
