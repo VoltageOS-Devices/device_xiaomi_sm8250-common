@@ -20,6 +20,7 @@ cc_binary {
     init_rc: ["vendor.lineage.livedisplay@2.1-service.xiaomi_kona.rc"],
     relative_install_path: "hw",
     srcs: [
+        ":vendor.lineage.livedisplay@2.0-sdm-pa",
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
         "AntiFlicker.cpp",
         "SunlightEnhancement.cpp",
@@ -29,6 +30,8 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libbinder",
+        "libcutils",
+        "libdl",
         "libhidlbase",
         "libutils",
         "vendor.lineage.livedisplay@2.0",

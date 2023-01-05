@@ -19,7 +19,8 @@
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
-
+#include <livedisplay/sdm/PictureAdjustment.h>
+#include <vendor/lineage/livedisplay/2.1/IPictureAdjustment.h>
 #include "AntiFlicker.h"
 #include "SunlightEnhancement.h"
 #include "livedisplay/sdm/SDMController.h"
@@ -27,9 +28,12 @@
 using android::OK;
 using android::sp;
 using android::status_t;
+using ::android::hardware::configureRpcThreadpool;
+using ::android::hardware::joinRpcThreadpool;
 
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 using ::vendor::lineage::livedisplay::V2_1::IAntiFlicker;
+using ::vendor::lineage::livedisplay::V2_1::IPictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
