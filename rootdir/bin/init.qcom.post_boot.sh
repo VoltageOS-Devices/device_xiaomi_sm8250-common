@@ -951,7 +951,7 @@ function configure_memory_parameters() {
     # Set allocstall_threshold to 0 for all targets.
     #
 
-    ProductName=`getprop ro.board.platform`
+    ProductName=`getprop ro.product.name`
     low_ram=`getprop ro.config.low_ram`
 
     if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ] || [ "$ProductName" == "alioth" ]; then
@@ -4525,6 +4525,9 @@ case "$target" in
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
     echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
+    echo "0:1248000" > /sys/module/cpu_boost/parameters/input_boost_freq
+    echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
+
     # Set Memory parameters
     configure_memory_parameters
 
@@ -5735,14 +5738,11 @@ case "$target" in
 	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
 
 	# cpuset parameters
-        echo 0-1     > /dev/cpuset/background/cpus
+        echo 0-2     > /dev/cpuset/background/cpus
         echo 0-3     > /dev/cpuset/system-background/cpus
-        echo 4-6     > /dev/cpuset/foreground/boost/cpus
-        echo 0-2,4-6 > /dev/cpuset/foreground/cpus
+        echo 4-7     > /dev/cpuset/foreground/boost/cpus
+        echo 0-2,4-7 > /dev/cpuset/foreground/cpus
         echo 0-7     > /dev/cpuset/top-app/cpus
-        echo 0-3     > /dev/cpuset/restricted/cpus
-        echo 0-7     > /dev/cpuset/camera-daemon/cpus
-        echo 0-7     > /dev/cpuset/camera-daemon-dedicated/cpus
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
@@ -5864,6 +5864,7 @@ case "$target" in
         # device/target specific folder
         setprop vendor.dcvs.prop 0
 	setprop vendor.dcvs.prop 1
+    echo N > /sys/module/lpm_levels/parameters/sleep_disabled
     configure_memory_parameters
     ;;
 esac
