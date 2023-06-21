@@ -117,7 +117,6 @@ case "$target" in
         # device/target specific folder
         setprop vendor.dcvs.prop 0
 	setprop vendor.dcvs.prop 1
-    configure_memory_parameters
     ;;
 esac
 
@@ -126,3 +125,4 @@ case "$target" in
     "kona")
         setprop vendor.post_boot.parsed 1
     ;;
+esac
