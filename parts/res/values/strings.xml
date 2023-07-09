@@ -153,4 +153,18 @@
     <string name="dc_dimming_enable_title">DC Dimming</string>
     <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
+
+    <!-- Kcal -->
+    <string name="kcal_settings_title">Kernel color calibration</string>
+    <string name="kcal_settings_summary">Calibrate display via Kcal</string>
+    <string name="kcal_values">Adjustable values</string>
+    <string name="red_title">Red</string>
+    <string name="green_title">Green</string>
+    <string name="blue_title">Blue</string>
+    <string name="saturation_title">Saturation</string>
+    <string name="contrast_title">Contrast</string>
+    <string name="hue_title">Hue</string>
+    <string name="value_title">Value</string>
+	<string name="graphics_title">Preview</string>
+	<string name="kcal_settings">Settings</string>
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Kcal RED sysfs node path -->
+    <string name="node_red_preference">/sys/module/msm_drm/parameters/kcal_red</string>
+
+    <!-- Kcal GREEN sysfs node path -->
+    <string name="node_green_preference">/sys/module/msm_drm/parameters/kcal_green</string>
+
+    <!-- Kcal BLUE sysfs node path -->
+    <string name="node_blue_preference">/sys/module/msm_drm/parameters/kcal_blue</string>
+
+    <!-- Kcal SATURATION sysfs node path -->
+    <string name="node_saturation_preference">/sys/module/msm_drm/parameters/kcal_sat</string>
+
+    <!-- Kcal CONTRAST sysfs node path -->
+    <string name="node_contrast_preference">/sys/module/msm_drm/parameters/kcal_cont</string>
+
+    <!-- Kcal HUE sysfs node path -->
+    <string name="node_hue_preference">/sys/module/msm_drm/parameters/kcal_hue</string>
+
+    <!-- Kcal VALUE sysfs node path -->
+    <string name="node_value_preference">/sys/module/msm_drm/parameters/kcal_val</string>
+</resources>

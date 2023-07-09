@@ -32,6 +32,7 @@ import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.settings.preferences.*;
 public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
@@ -58,6 +59,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         ThermalUtils.startService(context);
         RefreshUtils.startService(context);
         FileUtils.enableService(context);
+        BluePreference.restore(context);
+        ContrastPreference.restore(context);
+        GreenPreference.restore(context);
+        HuePreference.restore(context);
+        RedPreference.restore(context);
+        SaturationPreference.restore(context);
+        ValuePreference.restore(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");

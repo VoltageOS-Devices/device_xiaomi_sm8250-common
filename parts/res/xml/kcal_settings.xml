@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:settings="http://schemas.android.com/apk/res/org.lineageos.settings"
+ 	android.title="@string/kcal_settings_title">
+
+    <PreferenceCategory
+        android:key="kcal_values"
+        android:title="@string/kcal_settings">
+
+        <org.lineageos.settings.preferences.RedPreference
+            android:key="red"
+            android:title="@string/red_title" />
+
+        <org.lineageos.settings.preferences.GreenPreference
+            android:key="green"
+            android:title="@string/green_title" />
+
+        <org.lineageos.settings.preferences.BluePreference
+            android:key="blue"
+            android:title="@string/blue_title" />
+
+        <org.lineageos.settings.preferences.SaturationPreference
+            android:key="saturation"
+            android:title="@string/saturation_title" />
+
+        <org.lineageos.settings.preferences.HuePreference
+            android:key="hue"
+            android:title="@string/hue_title" />
+
+        <org.lineageos.settings.preferences.ValuePreference
+            android:key="value"
+            android:title="@string/value_title" />
+
+        <org.lineageos.settings.preferences.ContrastPreference
+            android:key="contrast"
+            android:title="@string/contrast_title" />
+    </PreferenceCategory>
+</PreferenceScreen>

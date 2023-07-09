@@ -70,6 +70,9 @@
 /dev/lirc[0-9]                                                          u:object_r:lirc_device:s0
 /dev/spidev[0-9]\.1                                                     u:object_r:lirc_device:s0
 
+# Kcal
+/sys/module/msm_drm/parameters(/.*)?                                    u:object_r:sysfs_dm:s0
+
 # LED
 /sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds(/.*)?            u:object_r:sysfs_leds:s0
 /sys/devices/platform/soc/[a-z0-9]+.i2c/i2c-[0-9]/[0-9]-[0-9]+/leds(/.*)?                                                                           u:object_r:sysfs_leds:s0
@@ -121,3 +124,4 @@
 
 # Label discard_max_bytes in /data partition
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_scsi_host:s0
+
